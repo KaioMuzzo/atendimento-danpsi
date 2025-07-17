@@ -1487,7 +1487,7 @@ function gerarRelatorio() {
             <div class="secao-relatorio">
                 <h3>FINALIDADE DO DOCUMENTO</h3>
                 <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin: 15px 0;">
-                    <p style="margin-bottom: 15px; line-height: 1.6; color: #000; font-size: 1.5rem; font-weight: 200;">
+                    <p style="margin-bottom: 15px; line-height: 1.6; color: #000; font-size: 1.2rem; font-weight: 200;">
                         <strong>Este relatório tem como objetivo:</strong>
                     </p>
                     <ul style="margin: 0; padding-left: 20px; color: #000; line-height: 1.6; font-weight: 400; font-size: 1rem;">
