@@ -769,7 +769,7 @@ function adicionarRegistro() {
   const frequencia = document.getElementById("frequenciaRegistro").value;
   const observacoes = document.getElementById("observacoesDia").value;
   const periodo = document.getElementById("periodoColeta").value;
-  const unidade = document.getElementById("unidadeFrequencia").value;
+  const unidade = "ocorrencias";
 
   // Validações
   if (!data || !frequencia || !periodo || !unidade) {
