@@ -1378,7 +1378,7 @@ function gerarCronograma() {
                 <div style="margin: 15px 0;">
                     <strong>Semana 4+:</strong> ${proc.fases.semana3}
                 </div>
-                <div style="margin-top: 20px; padding: 15px; background: #c8e6c9 ; border-radius: 8px; border-left: 10px solid var(--bg-dark-green);">
+                <div style="margin-top: 20px; padding: 15px; background: #c8e6c9; border-radius: 8px; border-left: 10px solid var(--bg-dark-green);">
                     <strong>Critério de Sucesso:</strong> Redução de ${getMetaReducao()}% no comportamento-problema em 4 semanas
                 </div>
             </div>
@@ -2167,15 +2167,19 @@ function exportarPDF() {
         <html>
         <head>
             <title>Relatório de Avaliação Funcional - ${dadosEntrevista.nome}</title>
-            <link rel="stylesheet" href="style.css" />
+            <link rel="stylesheet" href="style.css"/>
         </head>
         <body>
-            ${relatorio}
+          ${relatorio}
         </body>
         </html>
     `);
   janela.document.close();
-  setTimeout(() => janela.print(), 1000);
+
+  janela.onload = () => {
+    janela.focus();
+    janela.print();
+  };
 }
 
 function novaAvaliacao() {

@@ -86,14 +86,12 @@ body {
 }
 
 #entrevista .section {
-    
     background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-bottom: 20px;
     border-top: 10px solid var(--bg-dark-green);
-
 }
 
 .section {
@@ -375,14 +373,12 @@ body {
 }
 
 .system-header h1 {
-    color: ;
     margin-bottom: 10px;
     font-size: 2rem;
     font-weight: 400;
 }
 
 .system-header p {
-    color: ;
     font-size: 1.2rem;
 }
 
@@ -575,4 +571,12 @@ tbody tr:hover {
 .function-assessment:hover {
     transform: scale(1.02);
     transition: all 0.3s ease;
+}
+
+@media print {
+    body { margin: 10mm; }
+    * { 
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
 }
