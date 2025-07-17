@@ -371,6 +371,7 @@ body {
     border-top: 10px solid var(--bg-dark-green);
     gap: 0.5rem;
     align-items: center;
+    text-align: center;
 }
 
 .system-header h1 {
