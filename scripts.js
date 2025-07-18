@@ -1005,7 +1005,7 @@ function gerarGraficoFrequencia() {
         </div>
         
         <!-- Análise de Tendência -->
-        <div style="margin-top: 15px; padding: 15px; background: #fff8e1; border-radius: 8px; border-left: 4px solid #ff9800;">
+        <div style="margin-top: 15px; padding: 15px; background: #fff8e1; border-radius: 8px; border-left: 10px solid #ff9800;">
             <h5 style="color: #4a6741; margin-bottom: 10px;">Análise de Tendência</h5>
             <p style="color: #6c757d; margin: 0; font-size: 14px; line-height: 1.5;">
                 ${analisarTendencia(frequencias)}
@@ -1282,7 +1282,7 @@ function selecionarProcedimentos() {
                         
                         <div style="margin-top: 15px; padding: 15px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
                             <h5 style="color: #4a6741; margin-bottom: 10px;">Cronograma de Implementação:</h5>
-                            <ul style="margin: 0; padding-left: 20px;">
+                            <ul style="margin-left: 15px; padding-left: 20px;">
                                 <li><strong>Semana 1:</strong> ${
                                   proc.fases.semana1
                                 }</li>
@@ -1343,9 +1343,9 @@ function gerarSecaoReferencias() {
   }
 
   return `
-        <div class="referencias-section">
-            <h3>Referências Científicas</h3>
-            <p style="margin-bottom: 20px; font-style: italic; color: #6c757d;">
+        <div class="referencias-section" style=" font-weight: 500;">
+            <h3 style="font-size: 1.2rem; font-weight: 500;">Referências Científicas</h3>
+            <p style="font-size: 1rem; font-weight: 500; margin-bottom: 20px; font-style: italic; color: #6c757d;">
                 Esta avaliação e as recomendações são baseadas em evidências científicas atuais (2015-2024) da área de Análise do Comportamento Aplicada e Transtorno do Espectro Autista.
             </p>
             ${referenciasSelecionadas
@@ -1486,7 +1486,7 @@ function gerarRelatorio() {
             ${gerarSecaoTerapeuta()}
 
             <div class="secao-relatorio">
-                <h3 style="font-size: 1.2rem; font-weight: 400;">FINALIDADE DO DOCUMENTO</h3>
+                <h3 style="font-size: 1.2rem; font-weight: 400; margin-top: 20px;">FINALIDADE DO DOCUMENTO</h3>
                 <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin: 15px 0;">
                     <p style="margin-bottom: 15px; line-height: 1.6; color: #000; font-size: 1.2rem; font-weight: 200;">
                         <strong>Este relatório tem como objetivo:</strong>
@@ -1499,7 +1499,7 @@ function gerarRelatorio() {
                         <li style="margin-bottom: 8px;">Servir como <strong>documento de referência</strong> para coordenação entre diferentes profissionais da equipe multidisciplinar.</li>
                     </ul>
                     <div style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.7); border-radius: 8px; border-left: 10px solid #e67e22;">
-                        <p style="margin: 0; font-style: italic; color: #000000; font-size: 14px;">
+                        <p style="margin: 0; font-style: italic; font-weight: 500; color: #000000; font-size: 14px;">
                             <strong>Importante:</strong> Este relatório não substitui avaliação médica ou psicológica completa. As recomendações devem ser implementadas com supervisão de profissional qualificado em Análise do Comportamento.
                         </p>
                     </div>
@@ -1645,8 +1645,8 @@ function gerarRelatorio() {
                 <h3 style="font-size: 1.2rem; font-weight: 500;">${
                   registrosFrequencia.length > 0 ? "5" : "4"
                 }. HIPÓTESE FUNCIONAL</h3>
-                <div class="hipotese-funcional">
-                    <strong style="font-size: 1rem; font-weight: 500;">Hipótese:</strong> O comportamento "${
+                <div class="hipotese-funcional" style="font-size: 1rem; font-weight: 500;">
+                    <strong >Hipótese:</strong> O comportamento "${
                       dadosEntrevista.comportamento || "descrito"
                     }" ocorre 
                     ${getHipoteseAntecedente()} e é mantido por ${getHipoteseConsequencia(
@@ -1697,15 +1697,15 @@ function gerarRelatorio() {
             </div>
             `
                 : `
-            <div class="secao-relatorio">
-                <h3>${
+            <div class="secao-relatorio" style="font-size: 1rem; font-weight: 500;">
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${
                   registrosFrequencia.length > 0 ? "6" : "5"
                 }. RECOMENDAÇÕES GERAIS</h3>
-                <div class="procedimento-recomendado">
-                    <h4>Estratégias Gerais de Manejo</h4>
+                <div class="procedimento-recomendado" style="font-size: 1rem; font-weight: 500;" >
+                    <h4 style="font-size: 1.2rem; font-weight: 500; margin-bottom: 15px;">Estratégias Gerais de Manejo</h4>
                     <p><strong>Descrição:</strong> Implementação de estratégias gerais baseadas na função comportamental identificada.</p>
                     <p><strong>Recomendações:</strong></p>
-                    <ul>
+                    <ul style="font-size: 1rem; font-weight: 500; margin-left: 30px;">
                         <li>Consultar analista do comportamento para avaliação mais detalhada</li>
                         <li>Implementar comunicação funcional básica</li>
                         <li>Estabelecer rotina estruturada e previsível</li>
@@ -1716,8 +1716,8 @@ function gerarRelatorio() {
             `
             }
             
-            <div class="secao-relatorio">
-                <h3>${
+            <div class="secao-relatorio" style="font-size: 1rem; font-weight: 500;">
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${
                   registrosFrequencia.length > 0
                     ? procedimentosRecomendados.length > 0
                       ? "7"
@@ -1726,7 +1726,7 @@ function gerarRelatorio() {
                     ? "6"
                     : "5"
                 }. CRITÉRIOS DE SUCESSO</h3>
-                <ul>
+                <ul style="font-size: 1rem; font-weight: 500; margin-left: 30px;">
                     <li>Redução de ${getMetaReducao()}% na frequência do comportamento-problema em 4 semanas</li>
                     <li>Aumento do uso de comunicação funcional em 70% das oportunidades</li>
                     <li>Melhora na tolerância a demandas/atividades por ${getMetaTolerancia()} minutos</li>
@@ -1735,7 +1735,7 @@ function gerarRelatorio() {
             </div>
             
             <div class="secao-relatorio">
-                <h3>${
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${
                   registrosFrequencia.length > 0
                     ? procedimentosRecomendados.length > 0
                       ? "8"
@@ -1744,23 +1744,24 @@ function gerarRelatorio() {
                     ? "7"
                     : "6"
                 }. MONITORAMENTO E REAVALIAÇÃO</h3>
-                <p><strong>Frequência de coleta de dados:</strong> Diária durante as primeiras 2 semanas, depois 3x/semana</p>
-                <p><strong>Reunião de progresso:</strong> A cada 2 semanas para ajustes necessários</p>
-                <p><strong>Reavaliação completa:</strong> Em 4-6 semanas</p>
-                <p><strong>Critério para mudança de procedimento:</strong> Melhora < 25% em 2 semanas consecutivas</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Frequência de coleta de dados:</strong> Diária durante as primeiras 2 semanas, depois 3x/semana</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Reunião de progresso:</strong> A cada 2 semanas para ajustes necessários</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Reavaliação completa:</strong> Em 4-6 semanas</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Critério para mudança de procedimento:</strong> Melhora < 25% em 2 semanas consecutivas</p>
             </div>
             
             <div class="secao-relatorio">
-                <h3>${proximaSecao(7)}. OBSERVAÇÕES IMPORTANTES</h3>
-                <div class="observacoes-importantes">
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${proximaSecao(7)}. OBSERVAÇÕES IMPORTANTES</h3>
+                <div class="observacoes-importantes" style="font-size: 1rem; font-weight: 500;">
                     ${getObservacoesImportantes()}
                 </div>
             </div>
             
             ${gerarSecaoReferencias()}
             
-            <div class="assinatura-container">
-                <p style="color: #000; font-size: 1.5rem; margin-bottom: 8px; text-align: center;"><strong>Sistema de Avaliação Funcional TEA</strong></p>
+            <div class="assinatura-container" style="gap: 10px;  text-align: center;">
+            <img src="src/assets/logo/logotipo-sem-fundo.png" alt="Logotipo" style="width: 100px;">
+                <p style="color: #000; font-size: 1.5rem; margin-bottom: 8px; text-align: center; font-weight: 500;"><strong>  Sistema de Avaliação Funcional TEA</strong></p>
                 <p style="font-size: 13px; color: #666; margin-bottom: 15px; text-align: center;"><em>Baseado em: FAI (O'Neill et al., 2015), QABF (Matson et al., 2018), Análise Funcional (Iwata & Dozier, 2019)</em></p>
                 
                 <div style="text-align: center;">
@@ -1784,7 +1785,7 @@ function gerarSecaoTerapeuta() {
   if (!dadosTerapeuta.nome && !dadosTerapeuta.profissao) {
     return `
             <div class="terapeuta-info-relatorio">
-                <h4 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 20px;">Terapeuta Responsável</h4>
+                <h4 style="font-size: 1.2rem; font-weight: 500; margin-bottom: 20px;">Terapeuta Responsável</h4>
                 <p style="text-align: 0.8 rem; left; font-weight: 400; margin-bottom: 20px; color: #6c757d; font-style: italic;">
                     Informações do terapeuta não foram preenchidas
                 </p>
@@ -1794,57 +1795,57 @@ function gerarSecaoTerapeuta() {
 
   return `
         <div class="terapeuta-info-relatorio">
-            <h4>Terapeuta Responsável pela Avaliação</h4>
+            <h4 style="font-size: 1.2rem; font-weight: 500; margin-bottom: 5px;">Terapeuta Responsável pela Avaliação:</h4>
             <div class="terapeuta-dados">
                 ${
                   dadosTerapeuta.nome
-                    ? `<p><strong>Nome:</strong> ${dadosTerapeuta.nome}</p>`
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Nome:</strong> ${dadosTerapeuta.nome}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.profissao
-                    ? `<p><strong>Profissão:</strong> ${getProfissaoTexto(
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Profissão:</strong> ${getProfissaoTexto(
                         dadosTerapeuta.profissao
                       )}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.especializacao
-                    ? `<p><strong>Especialização:</strong> ${dadosTerapeuta.especializacao}</p>`
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Especialização:</strong> ${dadosTerapeuta.especializacao}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.registro
-                    ? `<p><strong>Registro Profissional:</strong> ${dadosTerapeuta.registro}</p>`
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Registro Profissional:</strong> ${dadosTerapeuta.registro}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.instituicao
-                    ? `<p><strong>Instituição:</strong> ${dadosTerapeuta.instituicao}</p>`
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Instituição:</strong> ${dadosTerapeuta.instituicao}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.contato
-                    ? `<p><strong>Contato:</strong> ${dadosTerapeuta.contato}</p>`
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Contato:</strong> ${dadosTerapeuta.contato}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.experiencia
-                    ? `<p><strong>Experiência com TEA:</strong> ${getExperienciaTexto(
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Experiência com TEA:</strong> ${getExperienciaTexto(
                         dadosTerapeuta.experiencia
                       )}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.formacao
-                    ? `<p><strong>Formação Específica:</strong> ${getFormacaoTexto(
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Formação Específica:</strong> ${getFormacaoTexto(
                         dadosTerapeuta.formacao
                       )}</p>`
                     : ""
                 }
                 ${
                   dadosTerapeuta.supervisao
-                    ? `<p><strong>Supervisão:</strong> ${getSupervisaoTexto(
+                    ? `<p style="font-size: 1rem; font-weight: 500;"><strong>Supervisão:</strong> ${getSupervisaoTexto(
                         dadosTerapeuta.supervisao
                       )}</p>`
                     : ""
@@ -2245,13 +2246,5 @@ window.addEventListener("beforeunload", function (e) {
   ) {
     e.preventDefault();
     e.return = "Você tem dados não salvos. Tem certeza que deseja sair?";
-  }
-});
-document.addEventListener('keydown', function (event) {
-  // Verifica se a tecla pressionada é a barra de espaço
-  if (event.code === 'Space' || event.key === ' ') {
-    event.preventDefault(); // Impede que a página role
-    showTab('relatorio'); 
-    exportarPDF(); // Chama sua função
   }
 });

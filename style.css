@@ -8,7 +8,7 @@
 
 :root {
   --bg-white-color: rgba(255, 255, 255, 0.9);
-  --bg-dark-green: #515F3C;
+  --bg-dark-green: #515f3c;
   --bg-body: #f8f8f8;
   --font-black-color: #202124;
   font-weight: 700;
@@ -18,12 +18,14 @@ body {
   font-family: "Outfit", sans-serif;
   min-height: 100vh;
   color: var(--font-black-color);
+  font-weight: 500;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  
 }
 
 .header {
