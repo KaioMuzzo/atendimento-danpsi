@@ -8,7 +8,7 @@
 
 :root {
   --bg-white-color: rgba(255, 255, 255, 0.9);
-  --bg-dark-green: #026451;
+  --bg-dark-green: #515F3C;
   --bg-body: #f8f8f8;
   --font-black-color: #202124;
 }
@@ -319,14 +319,14 @@ body {
 
 .content .section {
   background: white;
-  padding: 20px 5%;
+  padding: 20px 3%;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   border-top: 10px solid var(--bg-dark-green);
 }
 #coleta .section {
-  margin: 0;
+  margin: 20px 3%;
 }
 .alert-danger {
   background: linear-gradient(135deg, #fff5f5 0%, #fed7da 100%);
