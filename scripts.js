@@ -1472,12 +1472,13 @@ function gerarRelatorio() {
   relatorioDiv.innerHTML = `
         <div class="relatorio-container">
             <div class="cabecalho-relatorio">
-                <h2>RELATÓRIO DE AVALIAÇÃO FUNCIONAL E PLANO DE INTERVENÇÃO</h2>
-                <p><strong>Data:</strong> ${dataAtual}</p>
-                <p><strong>Criança:</strong> ${
+                <img src="src/assets/logo/logotipo-sem-fundo.png" alt="Logotipo" style="width: 100px;margin-bottom: 20px;">
+                <h2 style=" font-size: 1.2rem; font-weight: 500;">RELATÓRIO DE AVALIAÇÃO FUNCIONAL E PLANO DE INTERVENÇÃO</h2>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Data:</strong> ${dataAtual}</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Criança:</strong> ${
                   dadosEntrevista.nome || "Não informado"
                 } (${dadosEntrevista.idade || "N/A"} anos)</p>
-                <p><strong>Informante:</strong> ${getInformanteTexto(
+                <p style="font-size: 1rem; font-weight: 500;" ><strong>Informante:</strong> ${getInformanteTexto(
                   dadosEntrevista.informante
                 )}</p>
             </div>
@@ -1485,7 +1486,7 @@ function gerarRelatorio() {
             ${gerarSecaoTerapeuta()}
 
             <div class="secao-relatorio">
-                <h3>FINALIDADE DO DOCUMENTO</h3>
+                <h3 style="font-size: 1.2rem; font-weight: 400;">FINALIDADE DO DOCUMENTO</h3>
                 <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin: 15px 0;">
                     <p style="margin-bottom: 15px; line-height: 1.6; color: #000; font-size: 1.2rem; font-weight: 200;">
                         <strong>Este relatório tem como objetivo:</strong>
@@ -1505,48 +1506,48 @@ function gerarRelatorio() {
                 </div>
             </div>
             
-            <div class="secao-relatorio">
-                <h3>1. DESCRIÇÃO DO COMPORTAMENTO</h3>
-                <p><strong>Topografia:</strong> ${
+            <div class="secao-relatorio" >
+                <h3 style="font-size: 1.2rem; font-weight: 500;">1. DESCRIÇÃO DO COMPORTAMENTO</h3>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Topografia:</strong> ${
                   dadosEntrevista.comportamento || "Não descrito"
                 }</p>
-                <p><strong>Frequência:</strong> ${getFrequenciaTexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Frequência:</strong> ${getFrequenciaTexto(
                   dadosEntrevista.frequencia
                 )}</p>
-                <p><strong>Duração:</strong> ${getDuracaoTexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Duração:</strong> ${getDuracaoTexto(
                   dadosEntrevista.duracao
                 )}</p>
-                <p><strong>Intensidade:</strong> ${
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Intensidade:</strong> ${
                   dadosEntrevista.intensidade || "Não informada"
                 }</p>
-                <p><strong>Risco de Segurança:</strong> ${getRiscoTexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Risco de Segurança:</strong> ${getRiscoTexto(
                   dadosEntrevista.riscoSeguranca
                 )}</p>
-                <p><strong>Impacto no Aprendizado:</strong> ${getImpactoTexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Impacto no Aprendizado:</strong> ${getImpactoTexto(
                   dadosEntrevista.impactoAprendizado
                 )}</p>
             </div>
             
             <div class="secao-relatorio">
-                <h3>2. PERFIL DA CRIANÇA</h3>
-                <p><strong>Nível TEA:</strong> ${getNivelTEATexto(
+                <h3 style="font-size: 1.2rem; font-weight: 500;" >2. PERFIL DA CRIANÇA</h3>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Nível TEA:</strong> ${getNivelTEATexto(
                   dadosEntrevista.nivelTEA
                 )}</p>
-                <p><strong>Comunicação:</strong> ${getComunicacaoTexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Comunicação:</strong> ${getComunicacaoTexto(
                   dadosEntrevista.nivelComunicacao
                 )}</p>
-                <p><strong>Uso de CAA:</strong> ${getCAATexto(
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Uso de CAA:</strong> ${getCAATexto(
                   dadosEntrevista.usoCAA
                 )}</p>
-                <p><strong>Perfil Sensorial:</strong> ${getPerfilSensorialTexto()}</p>
-                <p><strong>Medicações:</strong> ${
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Perfil Sensorial:</strong> ${getPerfilSensorialTexto()}</p>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Medicações:</strong> ${
                   dadosEntrevista.medicacao || "Nenhuma informada"
                 }</p>
             </div>
             
             <div class="secao-relatorio">
-                <h3>3. ANÁLISE FUNCIONAL</h3>
-                <p><strong>Função Predominante:</strong> ${
+                <h3 style="font-size: 1.2rem; font-weight: 500;">3. ANÁLISE FUNCIONAL</h3>
+                <p style="font-size: 1rem; font-weight: 500;"><strong>Função Predominante:</strong> ${
                   funcaoPredominante || "Não definida"
                 } (${Math.max(...Object.values(scoresFuncoes))}/12 pontos)</p>
                 
@@ -1557,10 +1558,10 @@ function gerarRelatorio() {
                         return `
                             <div class="barra-funcao">
                                 <div style="display: flex; align-items: center; margin-bottom: 5px; justify-content: space-between;">
-                                    <span style="font-weight: 600; color: #000; min-width: 140px;">
+                                    <span style="font-weight: 500; color: #000; min-width: 140px;">
                                         ${getFuncaoNome(funcao)}:
                                     </span>
-                                    <span style="font-weight: bold; color: #000;">${score}/12 (${Math.round(
+                                    <span style="font-weight: 500; color: #000;">${score}/12 (${Math.round(
                           (score / 12) * 100
                         )}%)</span>
                                 </div>
@@ -1641,11 +1642,11 @@ function gerarRelatorio() {
             }
             
             <div class="secao-relatorio">
-                <h3>${
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${
                   registrosFrequencia.length > 0 ? "5" : "4"
                 }. HIPÓTESE FUNCIONAL</h3>
                 <div class="hipotese-funcional">
-                    <strong>Hipótese:</strong> O comportamento "${
+                    <strong style="font-size: 1rem; font-weight: 500;">Hipótese:</strong> O comportamento "${
                       dadosEntrevista.comportamento || "descrito"
                     }" ocorre 
                     ${getHipoteseAntecedente()} e é mantido por ${getHipoteseConsequencia(
@@ -1783,8 +1784,8 @@ function gerarSecaoTerapeuta() {
   if (!dadosTerapeuta.nome && !dadosTerapeuta.profissao) {
     return `
             <div class="terapeuta-info-relatorio">
-                <h4>Terapeuta Responsável</h4>
-                <p style="text-align: center; color: #6c757d; font-style: italic;">
+                <h4 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 20px;">Terapeuta Responsável</h4>
+                <p style="text-align: 0.8 rem; left; font-weight: 400; margin-bottom: 20px; color: #6c757d; font-style: italic;">
                     Informações do terapeuta não foram preenchidas
                 </p>
             </div>
@@ -2244,5 +2245,13 @@ window.addEventListener("beforeunload", function (e) {
   ) {
     e.preventDefault();
     e.return = "Você tem dados não salvos. Tem certeza que deseja sair?";
+  }
+});
+document.addEventListener('keydown', function (event) {
+  // Verifica se a tecla pressionada é a barra de espaço
+  if (event.code === 'Space' || event.key === ' ') {
+    event.preventDefault(); // Impede que a página role
+    showTab('relatorio'); 
+    exportarPDF(); // Chama sua função
   }
 });
