@@ -850,7 +850,7 @@ function atualizarTabelaRegistros() {
     .map(
       (registro, index) => `
         <tr>
-            <td style="padding: 10px; border: 1px solid #dee2e6;">${registro.dataFormatada}</td>
+            <td style="font-size: 0.8;padding: 10px; border: 1px solid #dee2e6;">${registro.dataFormatada}</td>
             <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center; font-weight: bold; color: #4a6741;">${registro.frequencia}</td>
             <td style="padding: 10px; border: 1px solid #dee2e6;">${registro.observacoes}</td>
             <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">
