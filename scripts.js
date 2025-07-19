@@ -936,24 +936,26 @@ function gerarGraficoFrequencia() {
                             <tr style="background: ${
                               index % 2 === 0 ? "#f8f9fa" : "white"
                             };">
-                                <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-weight: bold;">
-                                    ${registro.dataFormatada}
-                                </td>
-                                <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-weight: bold; color: ${cor}; font-size: 16px;">
-                                    ${registro.frequencia}
-                                </td>
-                                <td style="padding: 8px; border: 1px solid #dee2e6;">
-                                    <div style="background: #e9ecef; height: 20px; border-radius: 10px; overflow: hidden; position: relative;">
-                                        <div style="background: ${cor}; width: ${percentual}%; height: 100%; border-radius: 10px; min-width: 2px;"></div>
-                                        <span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 11px; color: #4a6741; font-weight: bold;">
-                                            ${percentual.toFixed(0)}%
-                                        </span>
-                                    </div>
-                                </td>
-                                <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-size: 12px; color: ${cor}; font-weight: bold;">
-                                    ${status}
-                                </td>
-                            </tr>
+  <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-weight: bold;">
+    ${registro.dataFormatada}
+  </td>
+  <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-weight: bold; color: ${cor}; font-size: 16px;">
+    ${registro.frequencia}
+  </td>
+  <td style="padding: 8px; border: 1px solid #dee2e6;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="background: #e9ecef; height: 20px; border-radius: 10px; overflow: hidden; position: relative; flex-grow: 1;">
+        <div style="background: ${cor}; width: ${percentual}%; height: 100%; border-radius: 10px; min-width: 2px;"></div>
+      </div>
+      <span style="font-size: 12px; color: #4a6741; font-weight: bold;">
+        ${percentual.toFixed(0)}%
+      </span>
+    </div>
+  </td>
+  <td style="padding: 8px; border: 1px solid #dee2e6; text-align: center; font-size: 12px; color: ${cor}; font-weight: bold;">
+    ${status}
+  </td>
+</tr>
                         `;
                       })
                       .join("")}
@@ -961,7 +963,7 @@ function gerarGraficoFrequencia() {
             </table>
             
             <!-- Legenda Visual Simplificada -->
-            <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #4a6741;">
+            <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 10px solid #4a6741;">
                 <div style="margin-bottom: 10px;">
                     <span style="display: inline-block; width: 15px; height: 15px; background: #4a6741; margin-right: 8px; vertical-align: middle;"></span>
                     <strong>Abaixo da média (${media.toFixed(1)})</strong>
@@ -1751,7 +1753,9 @@ function gerarRelatorio() {
             </div>
             
             <div class="secao-relatorio">
-                <h3 style="font-size: 1.2rem; font-weight: 500;">${proximaSecao(7)}. OBSERVAÇÕES IMPORTANTES</h3>
+                <h3 style="font-size: 1.2rem; font-weight: 500;">${proximaSecao(
+                  7
+                )}. OBSERVAÇÕES IMPORTANTES</h3>
                 <div class="observacoes-importantes" style="font-size: 1rem; font-weight: 500;">
                     ${getObservacoesImportantes()}
                 </div>
